@@ -1,0 +1,15 @@
+package stringsAndStringBuilder;
+import java.util.Arrays;
+public class JavaLesson13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String randomString = "I'm just a random string";//always in double quotes
+		String randomString2 = "This is it";
+		System.out.println(randomString.compareTo(randomString2));
+		if(randomString.equals(randomString2)){
+			System.out.println("Strings have the same value");
+		}
+	}
+
+}

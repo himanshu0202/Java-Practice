@@ -1,0 +1,18 @@
+package stringsAndStringBuilder;
+import java.util.Arrays;
+public class JavaLesson13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String randomString = "I'm just a random string";//always in double quotes
+		String randomString2 = randomString;
+		System.out.println(randomString.compareTo(randomString2));
+		if(randomString==randomString2){
+			System.out.println("String Objects refer to the same String");
+		}
+		System.out.println(randomString.indexOf("ri"));
+		
+		System.out.println(randomString.indexOf(3,16));
+	}
+
+}

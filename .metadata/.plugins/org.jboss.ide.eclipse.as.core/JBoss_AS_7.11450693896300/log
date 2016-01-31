@@ -1,0 +1,13 @@
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-12-21 04:52:05.419
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16842784 2015-12-21 04:59:33.472
+!MESSAGE 
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-12-21 04:59:37.926
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2015-12-21 04:59:38.318
+!MESSAGE The server was shutdown forcefully. All processes were terminated.

@@ -1,0 +1,23 @@
+package arrayList;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Arrays;
+public class JavaLessonEleven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList arrayListOne;
+		
+		arrayListOne = new ArrayList();
+		
+		ArrayList arrayListTwo = new ArrayList();
+		
+		ArrayList<String> names = new ArrayList<String>();
+		names.add("John Smith");
+		names.add("Himanshu Anand");
+		names.add("Aladdin");
+		
+		names.add(2, "Kacie Latchford");
+	}
+
+}

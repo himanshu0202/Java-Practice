@@ -1,0 +1,67 @@
+package linkedlist;
+
+public class Link{
+	public String bookName;
+	public int millionsSold;
+	public Link next;
+	
+	public Link(String bookName,int millionsSold){
+		this.bookName=bookName;
+		this.millionsSold=millionsSold;
+	}
+	
+	public void display(){
+		System.out.println("Book with name" + " " + bookName + " has " + millionsSold + ",000,000 copies sold");
+	}
+	
+	public String toString(){
+		return bookName;
+	}
+	
+	public static void main(String[] args){
+		linkedList theLinkedList=new linkedList();
+		theLinkedList.insertFirstLink("A Thousand Splendid Suns",500);
+		theLinkedList.insertFirstLink("Harry Porter",700);
+		theLinkedList.insertFirstLink("A Kite Runner",800);
+		theLinkedList.display();
+	}
+}
+
+class linkedList{
+	
+	public Link firstLink;
+	
+	public linkedList(){
+		firstLink=null;
+	}
+	
+	public boolean isEmpty(){
+		return(firstLink==null);
+	}
+	
+	public void insertFirstLink(String bookName,int millionsSold){
+		Link newLink=new Link(bookName,millionsSold);
+		newLink.next=firstLink;
+		firstLink=newLink;
+	}
+	
+	public Link removeFirstLink(){
+		Link theLink=firstLink;
+		if(!isEmpty()){
+			firstLink=firstLink.next;
+		}
+		else{
+			System.out.println("Empty Linked List");
+		}
+		return theLink;
+	}
+	
+	public void display(){
+		Link theLink=firstLink;
+		while(theLink!=null){
+			theLink.display();
+			System.out.println("Next Link:"+ theLink.next);
+			theLink=theLink.next;
+		}
+	}
+}

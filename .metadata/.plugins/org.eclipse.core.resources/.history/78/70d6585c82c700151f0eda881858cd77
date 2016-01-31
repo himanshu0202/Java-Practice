@@ -1,0 +1,24 @@
+package linkLists;
+import java.util.Arrays;
+import java.util.LinkedList;
+public class JavaLessonTwelve {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList linkedListOne = new LinkedList();
+		LinkedList<String> names = new LinkedList<String>();
+		names.add("Ahmed Bennani");
+		names.add("Ali Syed");
+		
+		names.addLast("Kurt Kobain");
+		names.addFirst("Hussain");
+		names.add(1, "Himanshu");
+		names.set(1, "Anand");
+		names.remove(1);
+		
+		for(String name:names){
+			System.out.println(name);
+		}
+	}
+
+}

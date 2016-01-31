@@ -1,0 +1,87 @@
+package linkedlist;
+
+public class Link {
+	
+	public String bookName;
+	public int millionsSold;
+	
+	public Link next;
+	
+	public Link(String bookName,int millionsSold){
+		this.bookName=bookName;
+		this.millionsSold=millionsSold;
+	}
+	
+	public void display(){
+		System.out.println(bookName + ": " + millionsSold + ",000,000");
+	}
+	
+	public String toString(){
+		return bookName;
+	}
+	
+	public static void main(String[] args) {
+		LinkList theLinkedList = new LinkList();
+		theLinkedList.insertFirstLink("Don Quixote",500);
+		theLinkedList.insertFirstLink("The Lord of the Rings",1000);
+		theLinkedList.insertFirstLink("The Kite Runner",700);
+		theLinkedList.insertFirstLink("A Thousand Splendid Suns",800);
+		theLinkedList.removeFirst();
+		theLinkedList.display();
+	}
+}
+
+class LinkList{
+	public Link firstLink;
+	LinkList(){
+		firstLink=null;
+	}
+	
+	public boolean isEmpty(){
+		return(firstLink==null);
+	}
+	
+	public void insertFirstLink(String bookName,int millionsSold){
+		Link newLink=new Link(bookName,millionsSold);
+		newLink.next=firstLink;
+		firstLink=newLink;
+	}
+	
+	public Link removeFirst(){
+		Link linkReference = firstLink;
+		
+		if(!isEmpty()){
+			firstLink=firstLink.next;
+		}else{
+			System.out.println("Empty Linked List");
+		}
+		return linkReference;
+	}
+	
+	public void display(){
+		Link theLink=firstLink;
+		while(theLink!=null){
+			theLink.display();
+			System.out.println("Next Link: " + theLink.next);
+			theLink=theLink.next;
+			System.out.println();
+		}
+	}
+	
+	public Link find(String bookName){
+		Link theLink=firstLink;
+		if(!isEmpty()){
+			while(theLink.bookName!=bookName){
+				if(theLink.next==null){
+					return null;
+				}else{
+					theLink=theLink.next;
+				}
+			}
+		}else{
+			System.out.println("Empty Linked List");
+		}
+		return theLink;
+	}
+	
+}

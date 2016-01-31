@@ -1,0 +1,12 @@
+
+public class ToString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char [] data = {'a','b','c','d','e','f'};
+		String str =new String(data);
+		String c = str.substring(2, 3);
+		System.out.println(c);
+	}
+
+}
